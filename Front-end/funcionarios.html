@@ -1,87 +1,113 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <meta charset="utf-8">
+	<meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
     <meta name="description" content="">
     <meta name="author" content="">
+	
     <link rel="icon" href="img/favicon.ico">
-
-    <title>Carousel Template for Bootstrap</title>
-
-    <!-- Bootstrap core CSS -->
+	<!-- Bootstrap core CSS -->
     <link href="css/bootstrap.min.css" rel="stylesheet">
-
-
+	<!--link para o css do menu-->
+	<link href="css/menu.css" rel="stylesheet">
     <!-- Custom styles for this template -->
     <link href="css/carousel.css" rel="stylesheet">
-  </head>
+	<!--link para estilos pessoais-->
+	<link href="css/estilo-pessoal.css" rel="stylesheet">
+	
+
+    <title>Folha de Pagamento</title>
+	
+	<br>
+	
+	<nav class="navbar navbar-default sidebar" role="navigation">
+		<div class="container-fluid">
+		    <div class="navbar-header">
+				<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-sidebar-navbar-collapse-1">
+					<span class="sr-only">Toggle navigation</span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+				</button>
+		    </div>
+			
+		    <div class="collapse navbar-collapse" id="bs-sidebar-navbar-collapse-1">
+				<ul class="nav navbar-nav">
+				  <li class="active"><a href="index.html">Home<span style="font-size:16px;" class="pull-right hidden-xs showopacity glyphicon glyphicon-home"></span></a></li>
+					    <li class="dropdown">
+						<a href="#" class="dropdown-toggle" data-toggle="dropdown">Funcionários <span class="caret"></span><span style="font-size:16px;" class="pull-right hidden-xs showopacity glyphicon glyphicon-user"></span></a>
+							<ul class="dropdown-menu forAnimate" role="menu">
+								<li><a href="funcionarios.html">Cadastrar</a></li>
+								<li><a href="funcionarios.html">Alterar</a></li>
+								<li><a href="funcionarios.html">Excluir</a></li>
+								<li class="divider"></li>
+								<li><a href="#">Informes</a></li>
+							</ul>
+					    </li>
+						
+						<li class="dropdown">
+						<a href="#" class="dropdown-toggle" data-toggle="dropdown">Cargos <span class="caret"></span><span style="font-size:16px;" class="pull-right hidden-xs showopacity glyphicon glyphicon-briefcase"></span></a>
+							<ul class="dropdown-menu forAnimate" role="menu">
+								<li><a href="#">Cadastrar</a></li>
+								<li><a href="#">Atualizar</a></li>
+								<li><a href="#">Excluir</a></li>
+								<li class="divider"></li>
+								<li><a href="#">Informes</a></li>
+							</ul>
+					    </li>
+				  <li ><a href="#">Libros<span style="font-size:16px;" class="pull-right hidden-xs showopacity glyphicon glyphicon-th-list"></span></a></li>
+				  <li ><a href="#">Tags<span style="font-size:16px;" class="pull-right hidden-xs showopacity glyphicon glyphicon-tags"></span></a></li>
+				</ul>
+		    </div>
+		</div>
+    </nav>
+
+	</head>
 <!-- NAVBAR
 ================================================== -->
   <body>
-    <div class="navbar-wrapper">
-		  <div class="container">
 
-        <nav class="navbar navbar-default sidebar" role="navigation">
-      <div class="container-fluid">
-      <div class="navbar-header">
-        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-sidebar-navbar-collapse-1">
-          <span class="sr-only">Toggle navigation</span>
-          <span class="icon-bar"></span>
-          <span class="icon-bar"></span>
-          <span class="icon-bar"></span>
-        </button>
-      </div>
-      <div class="collapse navbar-collapse" id="bs-sidebar-navbar-collapse-1">
-        <ul class="nav navbar-nav">
-          <li class="active"><a href="#">Home<span style="font-size:16px;" class="pull-right hidden-xs showopacity glyphicon glyphicon-home"></span></a></li>
-          <li class="dropdown">
-            <a href="#" class="dropdown-toggle" data-toggle="dropdown">Usuarios <span class="caret"></span><span style="font-size:16px;" class="pull-right hidden-xs showopacity glyphicon glyphicon-user"></span></a>
-            <ul class="dropdown-menu forAnimate" role="menu">
-              <li><a href="{{URL::to('createusuario')}}">Crear</a></li>
-              <li><a href="#">Modificar</a></li>
-              <li><a href="#">Reportar</a></li>
-              <li class="divider"></li>
-              <li><a href="#">Separated link</a></li>
-              <li class="divider"></li>
-              <li><a href="#">Informes</a></li>
-            </ul>
-          </li>
-          <li ><a href="#">Libros<span style="font-size:16px;" class="pull-right hidden-xs showopacity glyphicon glyphicon-th-list"></span></a></li>
-          <li ><a href="#">Tags<span style="font-size:16px;" class="pull-right hidden-xs showopacity glyphicon glyphicon-tags"></span></a></li>
-        </ul>
-      </div>
-    </div>
-  </nav>
+    <!-- Carousel
+    ================================================== -->
 
-		  </div>
+    <div class="col-sm-9 col-sm-offset-3 col-md-10 col-md-offset-2 main">
+		<div id="myCarousel" class="carousel slide" data-ride="carousel">
 
-		<div class="container">
-		<h1>Cadastro de Funcionários</h1>
+		    <h1>Cadastro de Funcionários</h1>
 
-		<br>
+			<br><br><br>
+			
 			<ul class="nav nav-tabs">
-				 <li role="presentation" class="active"><a href="#">Cadastro</a></li>
-				 <li role="presentation"><a href="#">Listas</a></li>
+				<li role="presentation" class="active"><a href="#">Cadastro</a></li>
+			    <li role="presentation"><a href="#">Listas</a></li>
 			</ul>
-			<br>
-				<form>
-					<div class="form-group">
-						<label for="exampleInputEmail1">Nome</label>
-						<input type="email" class="form-control" id="exampleInputEmail1">
-					</div>
+			
+			<br><br>
+			
+			<form>
+				<div class="form-group">
+					<label for="exampleInputEmail1">Nome</label>
+					<input type="email" class="form-control" id="exampleInputEmail1">
+				</div>
 
-					<div class="form-group">
-						<label for="exampleInputPassword1">CPF</label>
-						<input type="password" class="form-control" id="exampleInputPassword1">
-					</div>
+				<div class="form-group">
+					<label for="exampleInputPassword1">CPF</label>
+					<input type="password" class="form-control" id="exampleInputPassword1">
+				</div>
 
-					<div class="form-group">
-						<label for="exampleInputPassword1">Cargo</label>
-						<input type="password" class="form-control" id="exampleInputPassword1">
-					</div>
+				<div class="form-group">
+				<label>Cargo</label>
+					<select class="form-control">
+						<option>Selecione o cargo</option>
+						<option>Vendedor</option>
+						<option>Secretária</option>
+						<option>Atendente</option>
+					</select>
+
+				</div>
 
 						  <!--<div class="form-group">
 							<label for="exampleInputFile">File input</label>
@@ -94,39 +120,25 @@
 							</label>
 						  </div>
 						  <button type="submit" class="btn btn-default">Submit</button>-->
-				</form>
-
-					<br><br>
-					<div class="panel panel-default">
-					  <!-- Default panel contents -->
-					  <div class="panel-heading">Lista de Funcionários</div>
-					  <div class="panel-body">
-						<p>...</p>
-					  </div>
-
-					  <!-- Table -->
-					  <table class="table">
-						...
-					  </table>
-					</div>
-
-					<br>
-
-					<!-- FOOTER -->
-				<footer>
-						<!---<p class="pull-right"><a href="#">Back to top</a></p>-->
-						<p>&copy; 2016 Company, Inc. &middot; <a href="#">Privacy</a> &middot; <a href="#">Terms</a></p>
-				</footer>
-
+						  
+						  <button type="submit" class="btn btn-default btn-sm">Salvar</button>
+			</form>
 		</div>
-
-    </div><!-- /.container -->
+		
+		<footer>
+		
+			<p>&copy; 2016 Company, Inc. &middot; <a href="#">Privacy</a> &middot; <a href="#">Terms</a></p>
+			
+		</footer>
+		
+    </div>
 
     <!-- Bootstrap core JavaScript
     ================================================== -->
     <!-- Placed at the end of the document so the pages load faster -->
+	
     <script src="js/jquery.min.js"></script>
     <script src="js/bootstrap.min.js"></script>
 
-  </body>
+    </body>
 </html>

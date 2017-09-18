@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
-	<head>
+  <head>
 	<meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -15,14 +15,16 @@
 	<link href="css/menu.css" rel="stylesheet">
     <!-- Custom styles for this template -->
     <link href="css/carousel.css" rel="stylesheet">
-    <!--link para estilos pessoais-->
+	<!--link para estilos pessoais-->
 	<link href="css/estilo-pessoal.css" rel="stylesheet">
+
 
     <title>Folha de Pagamento</title>
 
 	<br>
 
-	<nav class="navbar navbar-default sidebar" role="navigation">
+
+  <nav class="navbar navbar-default sidebar" role="navigation">
 		<div class="container-fluid">
 		    <div class="navbar-header">
 				<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-sidebar-navbar-collapse-1">
@@ -57,14 +59,16 @@
 								<li><a href="#">Informes</a></li>
 							</ul>
 					    </li>
-				</ul>
+				  </ul>
 		    </div>
 		</div>
     </nav>
 
 	</head>
 
-    <body>
+<!-- NAVBAR
+================================================== -->
+  <body>
 
     <!-- Carousel
     ================================================== -->
@@ -72,21 +76,52 @@
     <div class="col-sm-9 col-md-10">
 		<div id="myCarousel" class="carousel slide" data-ride="carousel">
 
-			<nav class="navbar navbar-default">
-		<div class="container-fluid">
-			<div class="panel panel-default">
-			<div class="panel-heading">
-				<h3 class="panel-title">Folha de Pagamento</h3>
-			</div>
-		<div class="panel-body">
+      <nav class="navbar navbar-default">
+    <div class="container-fluid">
+      <div class="panel panel-default">
+      <div class="panel-heading">
+        <h3 class="panel-title">Cadastrar Cargos</h3>
+      </div>
+    <div class="panel-body">
 
-		    <div class="carousel-inner" role="listbox">
-				<div class="item active">
+			<ul class="nav nav-tabs">
+				<li role="presentation" class="active"><a href="#">Cadastro</a></li>
 
-				    <img class="first-slide" src="img/folhapg.jpg" alt="Imagem de uma calculadora e uma caneta.">
+			</ul>
 
+			<br><br>
+
+			<form>
+				<div class="form-group">
+					<label for="exampleInputEmail1">Cargo</label>
+					<input type="email" class="form-control" id="exampleInputEmail1">
 				</div>
-		    </div>
+
+				<div class="form-group">
+					<label for="exampleInputPassword1">Descrição</label>
+					<input type="password" class="form-control" id="exampleInputPassword1">
+				</div>
+
+
+
+						  <!--<div class="form-group">
+							<label for="exampleInputFile">File input</label>
+							<input type="file" id="exampleInputFile">
+							<p class="help-block">Example block-level help text here.</p>
+						  </div>
+						  <div class="checkbox">
+							<label>
+							  <input type="checkbox"> Check me out
+							</label>
+						  </div>
+						  <button type="submit" class="btn btn-default">Submit</button>-->
+
+              <div class="form-group" align="right">
+    						<button type="submit" ng-click="limparCampos()" class="btn btn-default btn-primary">Novo</button>
+    						<button type="submit" class="btn btn-default btn-primary">Salvar</button>
+    						<button type="submit" class="btn btn-default btn-primary">Excluir</button>
+    					</div>
+			</form>
 		</div>
 
 		<footer>
@@ -94,7 +129,7 @@
 			<p>&copy; 2016 Company, Inc. &middot; <a href="#">Privacy</a> &middot; <a href="#">Terms</a></p>
 
 		</footer>
-	</div>
+  </div>
 </div>
 </nav>
 

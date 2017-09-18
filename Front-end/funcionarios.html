@@ -11,7 +11,7 @@
 	<script src="js/angular.min.js"></script>
 	<!--importando o controller-->
 	<script src="controller/funcionarios.js"></script>
-	
+
     <link rel="icon" href="img/favicon.ico">
 	<!-- Bootstrap core CSS -->
     <link href="css/bootstrap.min.css" rel="stylesheet">
@@ -21,13 +21,13 @@
     <link href="css/carousel.css" rel="stylesheet">
 	<!--link para estilos pessoais-->
 	<link href="css/estilo-pessoal.css" rel="stylesheet">
-	
-	
+
+
 
     <title>Folha de Pagamento</title>
-	
+
 	<br>
-	
+
 	<nav class="navbar navbar-default sidebar" role="navigation">
 		<div class="container-fluid">
 		    <div class="navbar-header">
@@ -38,7 +38,7 @@
 					<span class="icon-bar"></span>
 				</button>
 		    </div>
-			
+
 		    <div class="collapse navbar-collapse" id="bs-sidebar-navbar-collapse-1">
 				<ul class="nav navbar-nav">
 				  <li class="active"><a href="index.html">Home<span style="font-size:16px;" class="pull-right hidden-xs showopacity glyphicon glyphicon-home"></span></a></li>
@@ -52,20 +52,18 @@
 								<li><a href="#">Informes</a></li>
 							</ul>
 					    </li>
-						
+
 						<li class="dropdown">
 						<a href="#" class="dropdown-toggle" data-toggle="dropdown">Cargos <span class="caret"></span><span style="font-size:16px;" class="pull-right hidden-xs showopacity glyphicon glyphicon-briefcase"></span></a>
 							<ul class="dropdown-menu forAnimate" role="menu">
-								<li><a href="#">Novo</a></li>
-								<li><a href="#">Salvar</a></li>
-								<li><a href="#">Excluir</a></li>
+								<li><a href="cargo.html">Novo</a></li>
+								<li><a href="cargo.html">Salvar</a></li>
+								<li><a href="cargo.html">Excluir</a></li>
 								<li class="divider"></li>
 								<li><a href="#">Informes</a></li>
 							</ul>
 					    </li>
-				  <li ><a href="#">Libros<span style="font-size:16px;" class="pull-right hidden-xs showopacity glyphicon glyphicon-th-list"></span></a></li>
-				  <li ><a href="#">Tags<span style="font-size:16px;" class="pull-right hidden-xs showopacity glyphicon glyphicon-tags"></span></a></li>
-				</ul>
+				  </ul>
 		    </div>
 		</div>
     </nav>
@@ -78,29 +76,33 @@
     <!-- Carousel
     ================================================== -->
 
-    <div class="col-sm-9 col-sm-offset-3 col-md-10 col-md-offset-2 main">
+    <div class="col-sm-9 col-md-10">
 		<div id="myCarousel" class="carousel slide" data-ride="carousel">
-			
-				<h1>Cadastro de Funcionários</h1>
 
-				<br><br><br>
-				
+      <nav class="navbar navbar-default">
+    <div class="container-fluid">
+      <div class="panel panel-default">
+      <div class="panel-heading">
+        <h3 class="panel-title">Cadastro de Funcionários</h3>
+      </div>
+    <div class="panel-body">
+
 				<ul class="nav nav-tabs">
 					<li role="presentation" class="active"><a href="#">Cadastro</a></li>
 					<li role="presentation"><a href="#">Listas</a></li>
 				</ul>
-				
+
 				<br><br>
-				
+
 				<form class="form-horizontal">
-				
+
 					<div class="form-group">
 						<label for="codigo" class="col-sm-2 control-label">Código</label>
 						<div class="col-sm-2">
 							<input type="text" ng-model="funcionario.codigo" class="form-control" id="codigo">
 						</div>
 					</div>
-					
+
 					<div class="form-group">
 						<label for="nome" class="col-sm-2 control-label">Nome</label>
 						<div class="col-sm-8">
@@ -140,47 +142,49 @@
 							  </div>
 							  <button type="submit" class="btn btn-default">Submit</button>-->
 
-					<div class="form-group" align="right">	
-						<button type="submit" ng-click="limparCampos()" class="btn btn-default btn-sm">Novo</button>	  
-						<button type="submit" class="btn btn-default btn-sm">Salvar</button>
-						<button type="submit" class="btn btn-default btn-sm">Excluir</button>
+					<div class="form-group" align="right">
+						<button type="submit" ng-click="limparCampos()" class="btn btn-default btn-primary">Novo</button>
+						<button type="submit" class="btn btn-default btn-primary">Salvar</button>
+						<button type="submit" class="btn btn-default btn-primary">Excluir</button>
 					</div>
 				</form>
-				
+
 				<br>
-				
-				<div class="container">
+
+
 					<table class="table table-striped table-hover">
 						<th>Código</th>
 						<th>Nome</th>
 						<th>CPF</th>
 						<th>Cargo</th>
 							<tr ng-repeat="funcionariosTabela in funcionarios" ng-click="selecionaFuncionario(funcionariosTabela)">
-							
+
 								<td>{{funcionariosTabela.codigo}}</td>
 								<td>{{funcionariosTabela.nome}}</td>
 								<td>{{funcionariosTabela.cpf}}</td>
 								<td>{{funcionariosTabela.cargo}}</td>
 							</tr>
-					
+
 					</table>
 				</div>
 
 				<footer>
-		
+
 					<p>&copy; 2016 Company, Inc. &middot; <a href="#">Privacy</a> &middot; <a href="#">Terms</a></p>
-			
+
 				</footer>
+      </div>
 		</div>
-		
-		<br>
-			
+  </nav>
+
+</div>
+
     </div>
 
     <!-- Bootstrap core JavaScript
     ================================================== -->
     <!-- Placed at the end of the document so the pages load faster -->
-	
+
     <script src="js/jquery.min.js"></script>
     <script src="js/bootstrap.min.js"></script>
 

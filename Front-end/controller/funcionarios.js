@@ -16,4 +16,14 @@ funcionariosModulo.controller("funcionariosController", function ($scope){
 		$scope.funcionario = "";
 	}
 
+	$scope.salvar = function(){
+		$scope.funcionarios.push($scope.funcionario);
+		$scope.limparCampos();
+	}
+
+	$scope.excluir = function(){
+		$scope.funcionarios.splice($scope.funcionarios.indexOf($scope.funcionario), 1);
+		$scope.limparCampos();
+	}
+
 });

@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+	<meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <link rel="icon" href="img/favicon.ico">
+	<!-- Bootstrap core CSS -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+	<!--link para o css do menu-->
+	<link href="css/menu.css" rel="stylesheet">
+    <!-- Custom styles for this template -->
+    <link href="css/carousel.css" rel="stylesheet">
+	<!--link para estilos pessoais-->
+	<link href="css/estilo-pessoal.css" rel="stylesheet">
+
+
+    <title>Folha de Pagamento</title>
+
+	<br>
+
+
+  <nav class="navbar navbar-default sidebar" role="navigation">
+		<div class="container-fluid">
+		    <div class="navbar-header">
+				<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-sidebar-navbar-collapse-1">
+					<span class="sr-only">Toggle navigation</span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+				</button>
+		    </div>
+
+		    <div class="collapse navbar-collapse" id="bs-sidebar-navbar-collapse-1">
+				<ul class="nav navbar-nav">
+				  <li class="active"><a href="index.html">Home<span style="font-size:16px;" class="pull-right hidden-xs showopacity glyphicon glyphicon-home"></span></a></li>
+
+					<li class="dropdown">
+				<a href="#" class="dropdown-toggle" data-toggle="dropdown">Rendimentos<span class="caret"></span><span style="font-size:16px;" class="pull-right hidden-xs showopacity glyphicon glyphicon-user"></span></a>
+					<ul class="dropdown-menu forAnimate" role="menu">
+						<li><a href="rendimentos.html">Novo</a></li>
+						<li><a href="rendimentos.html">Salvar</a></li>
+						<li><a href="rendimentos.html">Excluir</a></li>
+						<li class="divider"></li>
+						<li><a href="#">Informes</a></li>
+					</ul>
+					</li>
+
+							<li class="dropdown">
+						<a href="#" class="dropdown-toggle" data-toggle="dropdown">Funcionários <span class="caret"></span><span style="font-size:16px;" class="pull-right hidden-xs showopacity glyphicon glyphicon-user"></span></a>
+							<ul class="dropdown-menu forAnimate" role="menu">
+								<li><a href="funcionarios.html">Novo</a></li>
+								<li><a href="funcionarios.html">Salvar</a></li>
+								<li><a href="funcionarios.html">Excluir</a></li>
+								<li class="divider"></li>
+								<li><a href="#">Informes</a></li>
+							</ul>
+					    </li>
+
+						<li class="dropdown">
+						<a href="#" class="dropdown-toggle" data-toggle="dropdown">Cargos <span class="caret"></span><span style="font-size:16px;" class="pull-right hidden-xs showopacity glyphicon glyphicon-briefcase"></span></a>
+							<ul class="dropdown-menu forAnimate" role="menu">
+								<li><a href="cargo.html">Novo</a></li>
+								<li><a href="cargo.html">Salvar</a></li>
+								<li><a href="cargo.html">Excluir</a></li>
+								<li class="divider"></li>
+								<li><a href="#">Informes</a></li>
+							</ul>
+				    </li>
+		   		  </ul>
+    		    </div>
+	     	</div>
+      </nav>
+	   </head>
+
+<!-- NAVBAR
+================================================== -->
+      <body>
+
+    <!-- Carousel
+    ================================================== -->
+
+   <div class="col-sm-9 col-md-10">
+	    <div id="myCarousel" class="carousel slide" data-ride="carousel">
+
+          <nav class="navbar navbar-light">
+              <div class="container-fluid">
+                <div class="panel panel-default">
+
+                  <div class="panel-heading" style="background-color: #B0C4DE;">
+                    <h1 class="panel-title" style="color: #fff; font-size: 25px; text-align: center;">Rendimentos</h1>
+                  </div>
+
+				          <div class="panel-body">
+            
+                    <form class="form-horizontal">
+                        <div class="form-group">
+                            <label for="codigo" class="col-sm-2 control-label">Matricula</label>
+                          <div class="col-sm-1">
+                            <input type="text" ng-model="funcionario.codigo" class="form-control" id="codigo">
+                          </div>
+                        </div>
+
+                      <div class="form-group">
+                          <label for="nome" class="col-sm-2 control-label">Nome</label>
+                        <div class="col-sm-8">
+                          <input type="text" ng-model="funcionario.nome" class="form-control" id="nome">
+                        </div>
+                      </div>
+
+                      <div class="form-group">
+                          <label for="cpf" class="col-sm-2 control-label">CPF</label>
+                      <div class="col-sm-3">
+                          <input type="text" ng-model="funcionario.cpf" class="form-control" id="cpf">
+                      </div>
+                      </div>
+
+                      <form class="form-horizontal">
+                        <div class="form-group">
+                            <label for="codigo" class="col-sm-2 control-label">Cargo</label>
+                          <div class="col-sm-2">
+                            <input type="text" ng-model="funcionario.codigo" class="form-control" id="codigo">
+                          </div>
+                        </div>
+
+                                            <br> <br> <br>
+
+                               <div class="form-group row">               
+                                      <div class="col-xs-2">
+                                        <label for="mesref">Mês Referência</label>
+                                        <input class="form-control" id="SalBase" type="text">
+                                      </div>
+                               </div>       
+
+                              <div class="form-group row">
+                                    <div class="col-xs-2">
+                                        <label for="SalBase">Salario Base</label>
+                                        <input class="form-control" id="SalBase" type="text">
+                                    </div>
+                                    <div class="col-xs-2">
+                                        <label for="hora50">Hora Extra 50%</label>
+                                        <input class="form-control" id="hora50" type="text">
+                                    </div>
+                                    <div class="col-xs-2">
+                                        <label for="hora100">Hora Extra 100%</label>
+                                        <input class="form-control" id="hora50" type="text">
+                                    </div>
+                                    <div class="col-xs-2">
+                                        <label for="gratif">Gratidicação</label>
+                                        <input class="form-control" id="gratif" type="text">
+                                    </div>
+                                     <div class="col-xs-2">
+                                        <label for="inss"> Desconto INSS</label>
+                                        <input class="form-control" id="inss" type="text">
+                                    </div>
+                                     <div class="col-xs-2">
+                                        <label for="irpf">Desconto IRPF</label>
+                                        <input class="form-control" id="irpf" type="text">
+                                    </div>
+
+                              </div>
+
+                              <br><br><br><br><br>  
+                      <form>
+                        <div class="form-group" align="right">
+                          <button type="submit" ng-click="limparCampos()" class="btn btn-default btn-primary">Novo</button>
+                          <button type="submit" class="btn btn-default btn-primary">Salvar</button>
+                          <button type="submit" class="btn btn-default btn-primary">Excluir</button>
+                        </div>
+                      </form>
+                    </form>
+	  	            </div>
+                </div>
+              </div>
+          </nav>
+              <footer>
+                <p>&copy; 2016 Company, Inc. &middot; <a href="#">Privacy</a> &middot; <a href="#">Terms</a></p>
+              </footer>
+
+      </div>
+    </div>
+
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+
+    <script src="js/jquery.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+
+    </body>
+</html>

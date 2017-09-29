@@ -34,15 +34,12 @@
 		    	</div>
 			</div>
     	</nav>
-    
 
 	</head>
-	<!-- NAVBAR
+	
 	<!-- NAVBAR
 	================================================== -->
     <body ng-controller = "funcionariosController">
-  
-		<!--<div ng-include src="'menu/menu.html'"></div>-->
 
 		<!-- Carousel
 		================================================== -->
@@ -127,11 +124,9 @@
 													<div class="form-group">
 													<label for="cargo" class="col-sm-2 control-label">Cargo</label>
 													<div class="col-sm-6">
-														<select class="form-control">
-															<option>Selecione o cargo</option>
-															<option>Vendedor</option>
-															<option>Secretária</option>
-															<option>Atendente</option>
+														<select class="form-control" ng-model="funcionario.cargo" 
+														ng-options="cargo.nome for cargo in cargos track by cargo.codigo" >
+															
 														</select>
 														</div>
 
@@ -177,22 +172,24 @@
 													<th>Cargo</th>
 													<th></th>
 														
-													<tr ng-repeat="funcionariosTabela in funcionarios | filter: pesquisaFuncionario" 
-															ng-click="selecionaFuncionario(funcionariosTabela)">
+													<tr ng-repeat="funcionariosTabela in funcionarios | filter: pesquisaFuncionario">
 															
 														<td>{{funcionariosTabela.codigo}}</td>
 														<td>{{funcionariosTabela.nome}}</td>
 														<td>{{funcionariosTabela.cpf}}</td>
-														<td>{{funcionariosTabela.cargos.nome}}</td>
+														<td>{{funcionariosTabela.cargo.nome}}</td>
 														
 														<td>
 													
 															<a href="#cadastro" aria-controls="cadastro" role="tab" 
-																data-toggle="tab" class="glyphicon glyphicon-edit"
-																style="text-decoration: none;">
-															</a>
+																data-toggle="tab" ng-click="selecionaFuncionario(funcionariosTabela)">
 																
-															<a class="glyphicon glyphicon-trash" ng-click="excluir()">
+																<i class="glyphicon glyphicon-edit" style="text-decoration: none;"></i>
+																
+															</a>
+															
+															<a ng-click="excluir()">
+																<i class="glyphicon glyphicon-trash" style="color: gray;" ng-click="selecionaFuncionario(funcionariosTabela)"></i>
 															</a>
 																
 														</td>
@@ -201,14 +198,6 @@
 
 												</table>
 												
-												<form>
-													<div class="form-group" align="right">
-														
-														<!--<button type="submit" ng-click="salvar()" class="btn btn-default btn-primary">Alterar</button>-->
-														<button type="submit" ng-click="excluir()" class="btn btn-default btn-danger">Excluir</button>
-																
-													</div>
-												</form>
 										</div>
 												
 									</div>

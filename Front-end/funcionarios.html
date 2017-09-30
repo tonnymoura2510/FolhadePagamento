@@ -132,6 +132,14 @@
 													
 														<button type="submit" ng-click="limparCampos()" class="btn btn-default btn-primary">Novo</button>
 														<button type="submit" ng-click="limparCampos()" class="btn btn-default btn-primary">Limpar</button>
+
+														<a href="#lista" aria-controls="lista" role="tab" 
+														
+															data-toggle="tab">
+															<button type="submit" ng-disabled="!funcionario.nome" ng-click="salvar()" class="btn btn-default btn-primary">Salvar</button>
+															
+														</a>
+
 														<button type="submit" ng-disabled="!funcionario.nome" ng-click="salvar()" class="btn btn-default btn-primary">Salvar</button>
 														
 													</div>

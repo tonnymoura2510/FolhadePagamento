@@ -1,0 +1,47 @@
+/*Início do estilo da tabela*/
+
+td{
+	text-align: center;
+}
+
+
+th{
+	text-align: center;
+	background-color: #d3d3d3;
+}
+
+
+/*Fim do estilo da tabela*/
+
+/*===============================================================*/
+
+/*Início do estilo do rodapÃ©*/
+
+footer p{
+	margin-left: 400px;
+}
+
+/*Fim do estilo do rodapÃ©*/
+
+[data-tooltip] {
+  position: relative;
+  font-weight: bold;
+}
+
+[data-tooltip]:after {
+  display: none;
+  position: absolute;
+  top: -5px;
+  padding: 5px;
+  border-radius: 3px;
+  left: calc(100% + 28px);
+  content: attr(data-tooltip);
+  white-space: nowrap;
+  background-color: #0095ff;
+  color: White;
+}
+
+[data-tooltip]:hover:after {
+  display: block;
+}
+
